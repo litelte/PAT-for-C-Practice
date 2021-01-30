@@ -1,0 +1,32 @@
+{
+    "files.associations": {
+        "stat.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "sys/wait.h": "c",
+        "sys/types.h": "c",
+        "unistd.h": "c"
+    },
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "terminal.integrated.automationShell.linux": "bash",
+    "code-runner.clearPreviousOutput": true,
+    "cSpell.words": [
+        "Varb",
+        "Varible",
+        "hong",
+        "mycmp",
+        "myday",
+        "preds",
+        "radtodeg",
+        "sdate",
+        "xiao",
+        "xiao hong",
+        "yptr"
+    ],
+    "cSpell.ignoreWords": [
+        "shkdsfhkdshfkshfkdshfk",
+        "shskdhfksfhksfdhkfshfdkhdf",
+        "wsizeof"
+    ],
+}
