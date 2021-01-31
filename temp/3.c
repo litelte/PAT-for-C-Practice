@@ -25,9 +25,7 @@ int NumLens(int inputNum)
     do
     {
         // printf("the number is :%d\n", tempVal % 10);
-        tempVal /= 10;Please input a Number:
-1000
-0
+        tempVal /= 10;
         lens++;
 
     } while (tempVal);
