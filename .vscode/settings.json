@@ -7,9 +7,8 @@
         "sys/types.h": "c",
         "unistd.h": "c"
     },
-    "editor.minimap.enabled": false,
-    "editor.formatOnSave": true,
-    "terminal.integrated.automationShell.linux": "bash",
+    "editor.formatOnSave": true, //保存时自动格式化
+    // "terminal.integrated.automationShell.linux": "bash",
     "code-runner.clearPreviousOutput": true,
     "cSpell.words": [
         "Varb",
