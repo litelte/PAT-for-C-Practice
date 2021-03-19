@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-03-18 15:50:30
  * @LastEditors: litelte
- * @LastEditTime: 2021-03-19 17:59:20
+ * @LastEditTime: 2021-03-19 23:18:24
  * @FilePath: /PAT-for-C-Practice/temp/11.c
  * @Description:
  */
@@ -19,9 +19,16 @@ Run By
 #include <stdio.h>
 int main(int argc, char const *argv[])
 {
-    int x = 2, y = 1;
-    int z = 0, w = 0;
-    x = x - y;
-    printf("x = %d\n", x);
+    // printf("hello world");
+    int res = 1;
+    int sum = 1;
+    for (int i = 0; i < 2; i++)
+    {
+        res *= 10;
+        printf("Res = %d\n", res);
+        sum += res;
+        printf("Sum = %d\n", sum);
+    }
+
     return 0;
 }
