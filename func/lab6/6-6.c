@@ -1,9 +1,9 @@
 /*
- * @Date: 2021-03-18 15:50:30
+ * @Date: 2021-03-21 17:23:03
  * @LastEditors: litelte
- * @LastEditTime: 2021-03-21 17:57:21
- * @FilePath: /PAT-for-C-Practice/temp/11.c
- * @Description:
+ * @LastEditTime: 2021-03-21 23:40:25
+ * @FilePath: /PAT-for-C-Practice/func/lab6/6-6.c
+ * @Description: 实验6-5 使用函数输出指定范围内的Fibonacci数
  */
 /*
 Run By
@@ -18,24 +18,35 @@ Run By
 
 #include <stdio.h>
 #include <math.h>
+
 int prime(int p);
-int main(int argc, char const *argv[])
+void Goldbach(int n);
+
+int main()
 {
-    int isWhat = 0;
-    for (int i = 1; i < 10; i++)
+    int m, n, i, cnt;
+
+    scanf("%d %d", &m, &n);
+    if (prime(m) != 0)
+        printf("%d is a prime number\n", m);
+    if (m < 6)
+        m = 6;
+    if (m % 2)
+        m++;
+    cnt = 0;
+    for (i = m; i <= n; i += 2)
     {
-        isWhat = prime(i);
-        if (isWhat)
-        {
-            printf("%d是素数\n", i);
-        }
+        Goldbach(i);
+        cnt++;
+        if (cnt % 5)
+            printf(", ");
         else
-        {
-            printf("%d不是素数\n", i);
-        }
+            printf("\n");
     }
+
     return 0;
 }
+
 int prime(int p)
 {
     // 一个判断p是否位素数的函数
@@ -57,4 +68,17 @@ int prime(int p)
         }
     }
     return isPrime;
+}
+void Goldbach(int n)
+{
+    // 定义另一个加数
+    int AnoNum = 0;
+    for (int index = 2; index < n - 1; index++)
+    {
+        if (prime(index) && (prime(n - index)))
+        {
+            printf("%d=%d+%d", n, index, n - index);
+            break;
+        }
+    }
 }
