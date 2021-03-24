@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-03-24 13:17:02
  * @LastEditors: litelte
- * @LastEditTime: 2021-03-24 23:09:50
+ * @LastEditTime: 2021-03-24 23:14:01
  * @FilePath: /PAT-for-C-Practice/func/lab8/8-1-8.c
  * @Description: 实验8-1-8 报数
  */
@@ -60,3 +60,5 @@ void CountOff(int n, int m, int out[])
             i = 0;
     }
 }
+
+/* 搞不懂这个输出结果，感觉题目的意思和最后的运行结果存在较大的差异 */
