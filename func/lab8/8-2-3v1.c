@@ -1,9 +1,9 @@
 /*
- * @Date: 2021-03-24 23:12:20
+ * @Date: 2021-03-24 23:44:09
  * @LastEditors: litelte
- * @LastEditTime: 2021-03-24 23:43:59
- * @FilePath: /PAT-for-C-Practice/func/lab8/8-2-3.c
- * @Description: 实验8-2-3 删除字符
+ * @LastEditTime: 2021-03-24 23:45:12
+ * @FilePath: /PAT-for-C-Practice/func/lab8/8-2-3v1.c
+ * @Description: 实验8-2-3 删除字符的改进版
  */
 /*
 Run By
@@ -25,6 +25,7 @@ void ReadString(char s[]); /* 由裁判实现，略去不表 */
 int main()
 {
     char str[MAXN], c;
+
     scanf("%c\n", &c);
     ReadString(str);
     delchar(str, c);
@@ -34,20 +35,16 @@ int main()
 }
 void delchar(char *str, char c)
 {
-    int index = 0;
-    int len = 0;
-    len = sizeof(str) / sizeof(str[0]);
-    // 确定跳出条件
-    while (str[index] != '\n')
+    char *string = str;
+    int i = 0, count = 0;
+    while (*(string + i) != '\0')
     {
-        if (str[index] == c)
+        if (*(string + i) != c)
         {
-            for (int i = index; i < len; i++)
-            {
-                str[i] = str[i + 1];
-            }
+            *(str + count) = *(string + i);
+            count++;
         }
-        len--;
-        index++;
+        i++;
     }
+    *(str + count) = '\0'; //点睛之笔奥
 }
