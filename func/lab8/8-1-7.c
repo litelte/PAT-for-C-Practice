@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-03-24 02:03:40
  * @LastEditors: litelte
- * @LastEditTime: 2021-03-24 13:15:03
+ * @LastEditTime: 2021-03-24 13:20:05
  * @FilePath: /PAT-for-C-Practice/func/lab8/8-1-7.c
  * @Description: 实验8-1-7 数组循环右移
  */
@@ -68,3 +68,6 @@ int ArrayShift(int a[], int n, int m)
         return 0;
     }
 }
+
+// 没想清楚这个题目为啥要放到指针的题型中
+// 最主要的代码，是使用数组方面的方法实现的
